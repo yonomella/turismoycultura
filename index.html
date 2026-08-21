@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Próximamente: Turismo y Cultura. Descubre los mejores destinos turísticos y culturales de España.">
+    <title>Próximamente | Turismo y Cultura</title>
+    <style>
+        /* Estilos globales */
+        :root {
+            --color-primario: #8B4513; /* Marrón tierra */
+            --color-secundario: #D2B48C; /* Beige */
+            --color-texto: #333;
+            --color-fondo: #FFF;
+            --fuente-titulos: 'Playfair Display', serif;
+            --fuente-texto: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fuente-texto);
+            color: var(--color-texto);
+            line-height: 1.6;
+            background-color: var(--color-fondo);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Estilos para el contenido principal */
+        .contenido {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 3rem;
+            color: var(--color-primario);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: var(--color-primario);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s;
+            margin: 0.5rem;
+        }
+
+        .boton:hover {
+            background-color: #6B3E0E;
+        }
+
+        .redes {
+            margin-top: 2rem;
+        }
+
+        .redes a {
+            display: inline-block;
+            margin: 0 1rem;
+            color: var(--color-primario);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .redes a:hover {
+            color: var(--color-secundario);
+        }
+
+        /* Animación para el texto */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, p, .boton, .redes {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            margin-top: 4rem;
+            padding: 1rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Estilos para el spinner (opcional) */
+        .spinner {
+            border: 4px solid rgba(139, 69, 19, 0.2);
+            border-radius: 50%;
+            border-top: 4px solid var(--color-primario);
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenido">
+        <!-- Logo (opcional: podéis añadir vuestro logo cuando lo tengáis) -->
+        <!-- <img src="logo.png" alt="Turismo y Cultura" class="logo"> -->
+
+        <h1>Próximamente</h1>
+        <p>Estamos trabajando en nuestro nuevo sitio web de turismo y cultura. Muy pronto podrás descubrir los mejores destinos, rutas y experiencias culturales de la comarca del noroeste en Murcia.</p>
+
+        <!-- Spinner (opcional) -->
+        <div class="spinner"></div>
+
+        <!-- Botones (opcional) -->
+        <div>
+            <a href="mailto:hola@turismoycultura.es" class="boton">Contáctanos</a>
+            <a href="#" class="boton">Suscríbete para novedades</a>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="redes">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Turismo y Cultura. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
