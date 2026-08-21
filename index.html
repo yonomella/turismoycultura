@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Próximamente: Turismo y Cultura. Descubre los mejores destinos turísticos y culturales de España.">
+    <title>Próximamente | Turismo y Cultura</title>
+    <style>
+        :root {
+            --color-primario: #8B4513;
+            --color-secundario: #D2B48C;
+            --color-texto: #333;
+            --color-fondo: #FFF;
+            --fuente-titulos: 'Playfair Display', serif;
+            --fuente-texto: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fuente-texto);
+            color: var(--color-texto);
+            line-height: 1.6;
+            background-color: var(--color-fondo);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contenido {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 3rem;
+            color: var(--color-primario);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: var(--color-primario);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s;
+            margin: 0.5rem;
+        }
+
+        .boton:hover {
+            background-color: #6B3E0E;
+        }
+
+        .redes {
+            margin-top: 2rem;
+        }
+
+        .redes a {
+            display: inline-block;
+            margin: 0 1rem;
+            color: var(--color-primario);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .redes a:hover {
+            color: var(--color-secundario);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, p, .boton, .redes, #contador {
+            animation: fadeIn 1s ease-out;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        #contador {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-primario);
+            margin: 1rem 0;
+        }
+
+        .formulario {
+            margin: 2rem 0;
+        }
+
+        .formulario input {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .formulario button {
+            background-color: var(--color-primario);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .formulario button:hover {
+            background-color: #6B3E0E;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenido">
+        <!-- Logo (opcional) -->
+        <!-- <img src="logo.png" alt="Turismo y Cultura" class="logo"> -->
+
+        <h1>Próximamente</h1>
+        <p>Estamos trabajando en nuestro nuevo sitio web de turismo y cultura. Muy pronto podrás descubrir los mejores destinos, rutas y experiencias culturales de España.</p>
+
+        <!-- Contador de días -->
+        <p id="contador"></p>
+
+        <!-- Botones -->
+        <div>
+            <a href="mailto:hola@turismoycultura.es" class="boton">Contáctanos</a>
+        </div>
+
+        <!-- Formulario de suscripción (ejemplo con Google Forms) -->
+        <div class="formulario">
+            <p>Suscríbete para recibir novedades:</p>
+            <form action="https://forms.gle/ejemplo" method="GET">
+                <input type="email" name="email" placeholder="Tu email" required>
+                <button type="submit">Suscríbeme</button>
+            </form>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="redes">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Turismo y Cultura. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Contador de días -->
+    <script>
+        // Fecha de lanzamiento (cambiadla por vuestra fecha)
+        const fechaLanzamiento = new Date('2026-12-01T00:00:00').getTime();
+
+        function actualizarContador() {
+            const ahora = new Date().getTime();
+            const distancia = fechaLanzamiento - ahora;
+
+            // Cálculo de días, horas, minutos y segundos
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            // Mostrar el contador en el HTML
+            const contador = document.getElementById('contador');
+            if (contador) {
+                contador.innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+            }
+        }
+
+        // Actualizar el contador cada segundo
+        setInterval(actualizarContador, 1000);
+        actualizarContador(); // Llamada inicial
+    </script>
+</body>
+</html>
