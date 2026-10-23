@@ -175,7 +175,58 @@
 
         <!-- Botones -->
         <div>
-            <a href="mailto:hola@turismoycultura.es" class="boton">Contáctanos</a>
+            <div class="contenedor-botones">
+                <button type="button" class="boton"
+                    onclick="abrirFormulario()" id="buttonContacto">
+                    Contáctanos
+                </button>
+            </div>
+
+            <!-- Modal de contacto -->
+            <div id="modalContacto" class="formularioConsulta">
+                <div class="modal-contenido">
+                    <h2>Contacta con nosotros</h2>
+                    <p>Envíanos tus dudas o consultas y te responderemos lo antes posible.</p>
+
+                    <form action="mailto:hola@turismoycultura.es"
+                        class="formulario"
+                        method="post"
+                        enctype="text/plain">
+                        <div>
+                            <input
+                                class="textarea"
+                                type="email"
+                                id="correo"
+                                name="Correo"
+                                placeholder="Tu email"
+                                required
+                            >
+                        </div>
+
+                        <h3>Tu comentario</h3>
+                        <div>
+                            <textarea
+                                id="consulta"
+                                name="Consulta"
+                                placeholder="Escribe aquí tu consulta..."
+                                rows="5"
+                                required
+                                class="textarea"
+                            ></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="boton">
+                                Enviar consulta
+                            </button>
+                            <button type="button"
+                                onclick="cerrarFormulario()"
+                                aria-label="Cerrar formulario">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <a href="#" class="boton">Suscríbete para novedades</a>
         </div>
 
@@ -221,6 +272,37 @@
                 contador.innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
             }
         }
+
+        function abrirFormulario() {
+            document.getElementById('modalContacto').style.display = 'flex';
+            document.getElementById('buttonContacto').style.display = 'none';
+        }
+
+        function cerrarFormulario() {
+            document.getElementById('modalContacto').style.display = 'none';
+            document.getElementById('buttonContacto').style.display = 'inline-block';
+        }
+
+        // Cerrar al pulsar fuera del contenido del modal
+        modalContacto.addEventListener('click', function(event) {
+            if (event.target === modalContacto) {
+                cerrarFormulario();
+            }
+        });
+
+        // Cerrar al pulsar fuera de la ventana
+        document.getElementById('modalContacto').addEventListener('click', function(event) {
+            if (event.target === this) {
+                cerrarFormulario();
+            }
+        });
+
+        // Cerrar con la tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                cerrarFormulario();
+            }
+        });
 
         // Actualizar el contador cada segundo
         setInterval(actualizarContador, 1000);

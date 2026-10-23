@@ -59,6 +59,17 @@ p {
     margin-bottom: 2rem;
 }
 
+.textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+
+}
+
 .boton {
     display: inline-block;
     background-color: var(--color-primario);
@@ -118,6 +129,13 @@ footer {
 
 .formulario {
     margin: 2rem 0;
+}
+
+.formularioConsulta {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .formulario input {
